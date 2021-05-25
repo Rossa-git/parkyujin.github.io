@@ -1,0 +1,186 @@
+/* ---------- 기본설정 ---------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body, html {
+    width: 100%;
+    min-width: 320px; /* 모바일 환경을 고려해서, 가장 작은 최소 크기. 적용될 일이 많지는 않다. */
+    font-family: 'Merriweather', serif;
+}
+img {
+    max-width: 100%; /* 사이즈가 변했을 때 넓이 유지 */
+    height: auto; /* 가로 길이에 맞춰 높이는 자동으로 변경 */
+}
+input, textarea, button, select { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -o-apperence: none;
+}
+ul, li, dl, ol {
+    list-style: none; /* 순서 요소들의 리스트 스타일 제거 */
+}
+
+/* ---------- 헤더 영역 ---------- */
+header {
+    position: fixed;
+    z-index: 50;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-color: #fff;
+}
+header h1 {
+    font-size: 100px;
+    display: block;
+    letter-spacing: 30px;
+    text-align: center;
+}
+header .header-member {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+header .header-member > li {
+    display: inline-block;
+    margin: 10px 20px;
+}
+header .header-member > li > a,
+header .header-member > li > a:hover {
+    color: #555;
+    text-decoration: none;
+}
+header .main-menu {
+    background-color: #444;
+    height: 45px;
+}
+header .main-menu > ul {
+    text-align: center;
+}
+header .main-menu > ul > li {
+    display: inline-block;
+}
+header .main-menu > ul > li > a {
+    display: block;
+    margin: 0 10px;
+    padding: 0 20px;
+    height: 40px;
+    line-height: 45px;
+    color: #fff;
+    text-decoration: none;
+    border-bottom: 1px solid #444;
+    transition: border 0.5s linear;
+}
+header > .main-menu > ul > li > a:hover {
+    border-bottom: 5px solid #fff;
+    color: #fff;
+    text-decoration: none;
+    transition: border 0.5s linear ;
+}
+
+
+/* ---------- 사이드메뉴 영역 ---------- */
+aside.side {
+    text-align: center;
+    position: fixed;
+    right: 0px;
+    top: 500px;
+    z-index: 30;
+    background-color: #444;
+}
+.side-list {
+    margin: 0;
+}
+.side-list li {
+    border-bottom: 1px solid #ccc;
+}
+
+.side-list li a {
+    display: block;
+    padding: 10px;
+    color: #fff;
+    font-size: 0.8em;
+    letter-spacing: -1px;
+}
+
+.side-list li a p {
+    margin: 0;
+}
+
+
+
+/* ---------- 슬라이드 섹션 영역 ---------- */
+.slide-section {
+    margin-top: 170px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.slide-section .slide-text {
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    text-align: center;
+}
+.slide-section .slide-text > h2 {
+    padding: 10px;
+    margin-bottom: 5px;
+    font-size: 36px;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #fff;
+    
+}
+.slide-section .slide-text > p {
+    padding: 10px;
+    margin-bottom: 5px;
+    font-size: 18px;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #fff;
+}
+
+
+
+/* ---------- 리스트 섹션 영역 ---------- */
+
+/* .list-section * {
+    border: 1px solid #444;
+} */
+
+.list-section .list-box {
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.list-section .list-content {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.list-section .hover-content {
+    position: absolute;
+    display: none;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+.list-section .list-box:hover > .hover-content {
+    display: block;
+}
+.list-section .hover-content a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+}
